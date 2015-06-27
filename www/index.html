@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Koala Dash</title>
+    </head>
+
+    <body>
+
+        <div class="preload">
+            <img src="img/stairs-1.png">
+            <img src="img/stairs-2.png">
+            <img src="img/trophyButton.png">
+            <img src="img/koala.png">
+            <img src="img/playButton.png">
+            <img src="img/stairbackground.png"> 
+            <img src="img/pauseButton.png">
+            <img src="img/coin.png">
+        </div>
+
+        <div id="container">
+
+            <div id="intro">
+                <img src="img/trophyButton.png" class="trophy-button">
+                <img src="img/koala.png" class="koala-big">
+                <img src="img/playButton.png" class="play-button">
+                <h3>KOALA<strong>DASH</strong></h3>
+                <p class="audio-on">
+                    < ON 
+                </p>
+                <p class="audio-off">
+                    < OFF
+                </p>
+                <span class="instruction-marquee">
+                    <p id="instructions">Catch a coin <strong>+1</strong>
+                        <img src='img/coin.png' class='coininstruction'>
+                        Miss a coin <strong>-1</strong>
+                        <img src='img/coin.png' class='coininstruction'>
+                        Avoid 
+                        <img src='img/leaf.png' class='leafinstruction'>
+                    </p>
+                </span>
+            </div>
+
+            <div id="stage">
+                <div id="stairs">
+                    <img src="img/stairbackground.png" class="stairbackground"> 
+                    <div id="staircase-1"></div>
+                    <div id="staircase-2"></div>
+                </div>
+                <canvas id="canvas" width="300" height="300"></canvas>
+                <div id="rail-left" class="rail"></div>
+                <div id="rail-right" class="rail"></div>
+                <img class="pause-button" src="img/pauseButton.png">
+            </div>
+            <footer>
+                <h3 class="stripe-1"></h3>
+                <div id="leaf-container">
+                    <img src='img/leaf.png' class='leaf enemyone'>
+                    <img src='img/leaf.png' class='leaf enemytwo'>
+                    <img src='img/leaf.png' class='leaf enemythree'>
+                    <img src='img/leaf.png' class='leaf enemyfour'>
+                </div>
+                <!--<div id="time">
+                    <h1>TIME- <strong>00:00</strong></h1>
+                </div>   -->
+                <div id="score">
+                    <h2><img src="img/coin.png" class="coin-timer"> - <strong></strong></h2>
+                </div>
+            </footer>
+
+            <div id='enter-initials'>
+                <h4><span id="initials-save">SAVE</span>
+                    <span id="initials-score">SCORE</span>
+                </h4>
+                <img class="high-score-koala" src="img/highScoreKoala@2x.png">
+                <ul id="enter-score-table">
+                    <li>YOUR SCORE - <strong></strong></li>
+                    <li>
+                        <form onsubmit="return saveInitials()">
+                            <input id='txt-name' name="txt-name" type="text" maxlength="10" max="10" placeholder="ENTER NAME">
+                            <input id="input-submit" type="submit">
+                        </form>
+                    </li>
+                </ul>
+                <button id='save-initials'>SUBMIT</button>     
+            </div>  
+
+            <div id="highscore-table">
+                <img class="close-button" src="img/closeButton.png">
+                <h4><span id="initials-save">GREEDY</span>
+                    <span id="initials-score">KOALAS</span>
+                </h4>
+                <img class="high-score-koala" src="img/highScoreKoala@2x.png">
+                <ul id='high-score-list'></ul>
+            </div>
+
+        </div>
+    
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/stopwatch.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+
+</html>
